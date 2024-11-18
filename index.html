@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Tênis - Esportivos e Casuais</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+    <script>
+
+        let cart = [];
+
+        // Função para atualizar o número de itens no carrinho
+        function updateCartCount() {
+            document.getElementById('cartCount').textContent = cart.length;
+        }
+
+        // Função para abrir o modal do
+
+    </script>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">StoreTênis</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#" id="cartButton">Carrinho (<span id="cartCount">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Encontre o seu Tênis Perfeito</h1>
+            <p>Esportivos, casuais e muito mais, para todos os estilos e ocasiões!</p>
+            <button class="cta-btn">Ver Produtos</button>
+        </div>
+    </section>
+
+    <section class="product-list">
+        <h2>Nosso Portfólio</h2>
+        <div class="products">
+            <div class="product-card" data-id="1">
+                <img src="https://via.placeholder.com/300x300?text=T%C3%AAnis+1" alt="Tênis Esportivo">
+                <h3>Tênis Esportivo XYZ</h3>
+                <p class="price">R$ 299,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card" data-id="2">
+                <img src="https://via.placeholder.com/300x300?text=T%C3%AAnis+2" alt="Tênis Casual">
+                <h3>Tênis Casual ABC</h3>
+                <p class="price">R$ 179,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card" data-id="3">
+                <img src="https://via.placeholder.com/300x300?text=T%C3%AAnis+3" alt="Tênis Esportivo">
+                <h3>Tênis Runner Z</h3>
+                <p class="price">R$ 249,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>&copy; 2024 Loja de Tênis - Todos os direitos reservados</p>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>Carrinho de Compras</h2>
+            <div id="cartItems"></div>
+            <button id="closeCartModal" class="btn-close">Fechar</button>
+        </div>
+    </div>
+</body>
+</html>
