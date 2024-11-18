@@ -48,8 +48,7 @@ body {
 
 /* Estilos do Hero */
 .hero {
-    background: url('banner.jpg') no-repeat center center/cover;
-    background-size: contain; /* A imagem se ajusta à div sem cortar */
+    background: url('https://via.placeholder.com/1600x600?text=Banner+de+Promo%C3%A7%C3%A3o') no-repeat center center/cover;
     color: #fff;
     padding: 100px 20px;
     text-align: center;
@@ -74,7 +73,6 @@ body {
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 170px;
 }
 
 .cta-btn:hover {
