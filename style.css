@@ -48,50 +48,29 @@ body {
 
 /* Estilos do Hero */
 /* Estilos do Hero */
-/* Estilos do Hero */
 .hero {
-    position: relative;
-    /* Para permitir o posicionamento absoluto do conteúdo */
     background: url('https://via.placeholder.com/1600x600?text=Banner+de+Promo%C3%A7%C3%A3o') no-repeat center center;
     background-image: url('banner.jpg');
-    /* Certifique-se de que o caminho da imagem está correto */
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     color: #fff;
-    padding: 100px 20px;
+    padding: 100px 20px 200px; /* Adiciona mais espaço abaixo da imagem */
     text-align: center;
-    height: auto;
 }
 
-/* Estilizando a imagem */
-.hero img {
-    width: 100%;
-    /* A imagem vai ocupar toda a largura da div */
-    height: auto;
-    /* Mantém a proporção original da imagem */
-    display: block;
-    /* Remove o espaço abaixo da imagem */
-    margin: 0 auto;
-    /* Centraliza a imagem na div */
-}
+/* Se você estiver usando a imagem diretamente com <img>, não precisa de background-image. */
 
-/* Estilo do conteúdo do texto e botão */
-.hero-text {
-    position: absolute;
-    top: 50%;
-    /* Coloca o texto no meio da imagem */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Centraliza o texto no centro da imagem */
-    z-index: 10;
-    /* Garante que o texto e o botão fiquem acima da imagem */
-}
 
 .hero h1 {
     font-size: 50px;
     margin-bottom: 20px;
     animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
 }
 
 .cta-btn {
@@ -102,8 +81,7 @@ body {
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
-    z-index: 10;
-    /* Assegura que o botão fique acima da imagem */
+    margin-top: 30px; /* Dá um espaçamento entre o texto e o botão */
 }
 
 .cta-btn:hover {
@@ -232,7 +210,6 @@ body {
         opacity: 0;
         transform: translateY(-50px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -244,7 +221,6 @@ body {
         opacity: 0;
         transform: scale(0.5);
     }
-
     to {
         opacity: 1;
         transform: scale(1);
@@ -252,12 +228,9 @@ body {
 }
 
 .hero img {
-    width: 100%;
-    /* A imagem vai ocupar toda a largura da div */
-    height: auto;
-    /* Mantém a proporção original da imagem */
-    display: block;
-    /* Remove o espaço abaixo da imagem */
-    margin: 0 auto;
-    /* Centraliza a imagem na div */
+    width: 100%;  /* A imagem vai ocupar toda a largura da div */
+    height: auto; /* Mantém a proporção original da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem na div */
 }
+
