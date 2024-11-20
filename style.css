@@ -11,7 +11,8 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Estilo para o menu suspenso */
+
+/* Estilos do menu dropdown */
 .navbar ul {
     list-style: none;
     padding: 0;
@@ -21,6 +22,7 @@ body {
 
 .navbar ul li {
     position: relative;
+    /* Necessário para posicionar o submenu corretamente */
 }
 
 .navbar ul li a {
@@ -32,6 +34,7 @@ body {
 
 .navbar .dropdown-menu {
     display: none;
+    /* Inicialmente escondido */
     position: absolute;
     top: 100%;
     left: 0;
@@ -53,14 +56,46 @@ body {
     background-color: #ff7f50;
 }
 
-/* Mostra o submenu ao passar o mouse */
+/* Exibe o submenu ao passar o mouse sobre o item de Produtos */
 .navbar .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Para dispositivos móveis, ao clicar */
-.dropdown.active .dropdown-menu {
-    display: block;
+
+
+/* Estilos do Header */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #ff7f50;
 }
 
 /* Estilos do Hero */
