@@ -11,8 +11,9 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Estilo para o menu suspenso */
 .navbar ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
@@ -26,30 +27,38 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     display: block;
-    color: black;
+    color: #fff;
 }
 
-.dropdown-menu {
+.navbar .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #333;
     min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-menu li a {
+.navbar .dropdown-menu li a {
     padding: 10px;
-    color: black;
-    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
 }
 
-.dropdown:hover .dropdown-menu {
+.navbar .dropdown-menu li a:hover {
+    background-color: #ff7f50;
+}
+
+/* Mostra o submenu ao passar o mouse */
+.navbar .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Para compatibilidade com o clique, em vez do hover, no mobile */
+/* Para dispositivos móveis, ao clicar */
 .dropdown.active .dropdown-menu {
     display: block;
 }
