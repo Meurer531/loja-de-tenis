@@ -11,39 +11,47 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Estilos do Header */
-.navbar {
-    background-color: #333;
-    color: #fff;
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
     padding: 10px 20px;
-    align-items: center;
-}
-
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.navbar nav ul {
-    list-style: none;
-    display: flex;
-}
-
-.navbar nav ul li {
-    margin-left: 20px;
-}
-
-.navbar nav ul li a {
-    color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
+    display: block;
+    color: black;
 }
 
-.navbar nav ul li a:hover {
-    color: #ff7f50;
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 200px;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    color: black;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Para compatibilidade com o clique, em vez do hover, no mobile */
+.dropdown.active .dropdown-menu {
+    display: block;
 }
 
 /* Estilos do Hero */
@@ -55,7 +63,8 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     color: #fff;
-    padding: 100px 20px 200px; /* Adiciona mais espaço abaixo da imagem */
+    padding: 100px 20px 200px;
+    /* Adiciona mais espaço abaixo da imagem */
     text-align: center;
 }
 
@@ -81,7 +90,8 @@ body {
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 30px; /* Dá um espaçamento entre o texto e o botão */
+    margin-top: 30px;
+    /* Dá um espaçamento entre o texto e o botão */
 }
 
 .cta-btn:hover {
@@ -210,6 +220,7 @@ body {
         opacity: 0;
         transform: translateY(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -221,6 +232,7 @@ body {
         opacity: 0;
         transform: scale(0.5);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -228,9 +240,12 @@ body {
 }
 
 .hero img {
-    width: 100%;  /* A imagem vai ocupar toda a largura da div */
-    height: auto; /* Mantém a proporção original da imagem */
-    display: block; /* Remove o espaço abaixo da imagem */
-    margin: 0 auto; /* Centraliza a imagem na div */
+    width: 100%;
+    /* A imagem vai ocupar toda a largura da div */
+    height: auto;
+    /* Mantém a proporção original da imagem */
+    display: block;
+    /* Remove o espaço abaixo da imagem */
+    margin: 0 auto;
+    /* Centraliza a imagem na div */
 }
-

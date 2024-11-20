@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +10,19 @@
     <script src="script.js" defer></script>
 </head>
 
-    <script>
+<script>
 
-        let cart = [];
+    let cart = [];
 
-        
-        function updateCartCount() {
-            document.getElementById('cartCount').textContent = cart.length;
-        }
 
-        
+    function updateCartCount() {
+        document.getElementById('cartCount').textContent = cart.length;
+    }
 
-    </script>
+
+
+</script>
+
 <body>
     <header>
         <div class="navbar">
@@ -28,9 +30,17 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Produtos</a></li>
+                    <li class="dropdown">
+                        <a href="#">Produtos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Esportivos</a></li>
+                            <li><a href="#">Casuais</a></li>
+                            <li><a href="#">Na Moda</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Sobre</a></li>
-                    <li><a href="#" id="cartButton"><img width="30px" height="30px" src="carrinho-de-compras.png" alt=""></a></li>
+                    <li><a href="#" id="cartButton"><img width="30px" height="30px" src="carrinho-de-compras.png"
+                                alt=""></a></li>
                 </ul>
             </nav>
         </div>
@@ -39,7 +49,7 @@
     <section class="hero">
         <div class="hero-text">
             <h1>Encontre o seu Tênis Perfeito</h1>
-            <button class="cta-btn">Ver Produtos</button> 
+            <button class="cta-btn">Ver Produtos</button>
         </div>
     </section>
 
@@ -80,4 +90,5 @@
         </div>
     </div>
 </body>
+
 </html>
