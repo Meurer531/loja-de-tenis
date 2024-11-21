@@ -101,8 +101,7 @@ body {
 /* Estilos do Hero */
 /* Estilos do Hero */
 .hero {
-    background: url('https://via.placeholder.com/1600x600?text=Banner+de+Promo%C3%A7%C3%A3o') no-repeat center center;
-    background-image: url('banner.jpg');
+    background: url('banner.jpg') no-repeat center center;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
