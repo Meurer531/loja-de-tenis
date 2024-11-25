@@ -103,6 +103,8 @@ body {
 .hero {
     background: url('banner.jpg') no-repeat center center;
     background-size: contain;
+    width: 500px;
+    height: 500px;
     background-position: center center;
     background-repeat: no-repeat;
     color: #fff;
