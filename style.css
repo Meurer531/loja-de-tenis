@@ -11,6 +11,58 @@ body {
     background-color: #f9f9f9;
 }
 
+
+/* Estilos do menu dropdown */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;  /* Necessário para posicionar o submenu corretamente */
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+.navbar .dropdown-menu {
+    display: none;  /* Inicialmente escondido */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .dropdown-menu li a {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;  /* Adiciona a transição para a cor do texto */
+}
+
+/* Efeito hover para as opções do submenu */
+.navbar .dropdown-menu li a:hover {
+    background-color: #ff7f50;  /* Cor de fundo */
+    color: #000;  /* Cor do texto (preto) */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item de Produtos */
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
 /* Estilos do Header */
 .navbar {
     background-color: #333;
@@ -33,14 +85,12 @@ body {
 
 .navbar nav ul li {
     margin-left: 20px;
-    position: relative; /* Necessário para o submenu */
 }
 
 .navbar nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 20px;
     transition: color 0.3s;
 }
 
@@ -48,44 +98,6 @@ body {
     color: #ff7f50;
 }
 
-/* Estilos do menu dropdown */
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.navbar .dropdown-menu {
-    display: none; /* Inicialmente escondido */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    min-width: 200px;
-    border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.navbar .dropdown-menu li a {
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.navbar .dropdown-menu li a:hover {
-    background-color: #ff7f50;
-    color: #000;
-}
-
-/* Exibe o submenu ao passar o mouse sobre o item de Produtos */
-.navbar .dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Hero Section (Banner) */
 .hero {
     background: url('https://media.giphy.com/media/9rOBh9e4ekpFq/giphy.gif') no-repeat center center;
     background-size: cover;
@@ -95,12 +107,8 @@ body {
     margin-top: 65px;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
+/* Se você estiver usando a imagem diretamente com <img>, não precisa de background-image. */
+
 
 .hero h1 {
     font-size: 50px;
@@ -121,7 +129,7 @@ body {
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 190px;
+    margin-top: 190px; /* Dá um espaçamento entre o texto e o botão */
 }
 
 .cta-btn:hover {
@@ -222,6 +230,7 @@ body {
     border-radius: 10px;
     width: 400px;
     text-align: center;
+    animation: fadeInModal 0.3s ease-out;
 }
 
 .cart-modal-content h2 {
@@ -265,3 +274,11 @@ body {
         transform: scale(1);
     }
 }
+
+.hero img {
+    width: 100%;  /* A imagem vai ocupar toda a largura da div */
+    height: auto; /* Mantém a proporção original da imagem */
+    display: block; /* Remove o espaço abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem na div */
+}
+
