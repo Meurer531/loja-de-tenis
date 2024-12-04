@@ -10,19 +10,6 @@
     <script src="script.js" defer></script>
 </head>
 
-<script>
-
-    let cart = [];
-
-
-    function updateCartCount() {
-        document.getElementById('cartCount').textContent = cart.length;
-    }
-
-
-
-</script>
-
 <body>
     <header>
         <div class="navbar">
@@ -32,7 +19,6 @@
                     <li><a href="#">Home</a></li>
                     <li class="dropdown">
                         <a href="#">Produtos</a>
-                        <!-- Submenu de Produtos -->
                         <ul class="dropdown-menu">
                             <li><a href="#">Esportivos</a></li>
                             <li><a href="#">Casuais</a></li>
@@ -40,74 +26,28 @@
                         </ul>
                     </li>
                     <li><a href="#">Sobre</a></li>
-                    <li><a href="#" id="cartButton"><img width="30px" height="30px" src="carrinho-de-compras.png"
-                                alt=""></a></li>
+                    <li><a href="#" id="cartButton"><img width="30px" height="30px" src="carrinho-de-compras.png" alt=""></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-
     <section class="hero">
         <div class="hero-text">
-            <h1 style="color: black;"></h1>
-            
+            <h1>Bem-vindo à Meurer'sTênis</h1>
+            <p>Os melhores tênis para esportes e casualidade.</p>
         </div>
     </section>
 
     <section class="product-list">
         <h2>Nosso Portfólio</h2>
-
         <div class="products">
-            <div class="product-card" data-id="1">
-                <img src="verm.jpg" alt="Tênis Esportivo">
-                <h3>Tênis Esportivo Axon G3 Vermelho</h3>
+            <div class="product-card">
+                <img src="verm.jpg" alt="Tênis Vermelho">
+                <h3>Tênis Esportivo Axon G3</h3>
                 <p class="price">R$ 299,99</p>
                 <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
-
-            <div class="product-card" data-id="2">
-                <img src="allstar.jpg" alt="Tênis Casual">
-                <h3>Tênis All Star Converse Casual Branco</h3>
-                <p class="price">R$ 179,99</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-
-            <div class="product-card" data-id="3">
-                <img src="nike.jpg" alt="Tênis Esportivo">
-                <h3>Tênis Nike Giannis Immortality 3</h3>
-                <p class="price">R$ 249,99</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-
-            <div class="product-card" data-id="3">
-                <img src="ass.avif" alt="Tênis Esportivo">
-                <h3>Tênis Nike SB Chron 2</h3>
-                <p class="price">R$ 256,50</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-
-            <div class="product-card" data-id="3">
-                <img src="femi.avif" alt="Tênis Esportivo">
-                <h3>Tênis Nike In-Season TR 13 Feminino</h3>
-                <p class="price">R$ 280,00</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-
-            <div class="product-card" data-id="3">
-                <img src="nike.jpg" alt="Tênis Esportivo">
-                <h3>Tênis Nike Giannis Immortality 3</h3>
-                <p class="price">R$ 249,99</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-
-            <div class="product-card" data-id="3">
-                <img src="nike.jpg" alt="Tênis Esportivo">
-                <h3>Tênis Nike Giannis Immortality 3</h3>
-                <p class="price">R$ 249,99</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
-            
         </div>
     </section>
 
@@ -119,7 +59,7 @@
         <div class="cart-modal-content">
             <h2>Carrinho de Compras</h2>
             <div id="cartItems"></div>
-            <button id="closeCartModal" class="btn-close">Fechar</button>
+            <button class="btn-close" id="closeCart">Fechar</button>
         </div>
     </div>
 </body>
