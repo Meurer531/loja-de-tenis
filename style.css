@@ -98,13 +98,11 @@ body {
     color: #ff7f50;
 }
 
-/* Estilos do Hero */
-/* Estilos do Hero */
 .hero {
-    background: url('https://example.com/your-image.gif') no-repeat center center;
-    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background: url('https://media.giphy.com/media/9rOBh9e4ekpFq/giphy.gif') no-repeat center center;
+    background-size: cover;
     color: #fff;
-    padding: 100px 20px 200px; /* Adiciona mais espaço abaixo da imagem */
+    padding: 100px 20px 200px;
     text-align: center;
     margin-top: 65px;
 }
