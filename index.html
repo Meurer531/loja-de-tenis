@@ -1,127 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Tênis - Esportivos e Casuais</title>
+    <title>Loja Online</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image" href="tenis.png">
-    <script src="script.js" defer></script>
 </head>
-
-<script>
-
-    let cart = [];
-
-
-    function updateCartCount() {
-        document.getElementById('cartCount').textContent = cart.length;
-    }
-
-
-
-</script>
-
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo">Meurer'sTênis</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#">Produtos</a>
-                        <!-- Submenu de Produtos -->
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Esportivos</a></li>
-                            <li><a href="#">Casuais</a></li>
-                            <li><a href="#">Na Moda</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#" id="cartButton"><img width="30px" height="30px" src="carrinho-de-compras.png"
-                                alt=""></a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li>
+                    <a href="#" id="cartButton">
+                        <img width="30px" height="30px" src="carrinho-de-compras.png" alt="Carrinho de Compras">
+                        <span id="cartCount" style="
+                            position: absolute;
+                            top: 5px;
+                            right: 10px;
+                            background-color: white;
+                            color: black;
+                            border-radius: 50%;
+                            padding: 2px 6px;
+                            font-size: 14px;
+                            display: none;">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
-
-
-    <section class="hero">
-        <div class="hero-text">
-            <h1 style="color: black;"></h1>
-
-        </div>
-    </section>
-
-    <section class="product-list">
-        <h2>Nosso Portfólio</h2>
-
-        <div class="products">
-            <div class="product-card" data-id="1">
-                <img src="verm.jpg" alt="Tênis Esportivo">
-                <h3>Tênis Esportivo Axon G3 Vermelho</h3>
-                <p class="price">R$ 299,99</p>
+    <main>
+        <section class="products">
+            <div class="product-card">
+                <img src="produto1.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p class="price">R$ 50,00</p>
                 <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
-
-            <div class="product-card" data-id="2">
-                <img src="allstar.jpg" alt="Tênis Casual">
-                <h3>Tênis All Star Converse Casual Branco</h3>
-                <p class="price">R$ 179,99</p>
+            <div class="product-card">
+                <img src="produto2.jpg" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p class="price">R$ 75,00</p>
                 <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
-
-            <div class="product-card" data-id="3">
-                <img src="nike.jpg" alt="Tênis Esportivo">
-                <h3>Tênis Nike Giannis Immortality 3</h3>
-                <p class="price">R$ 249,99</p>
+            <div class="product-card">
+                <img src="produto3.jpg" alt="Produto 3">
+                <h3>Produto 3</h3>
+                <p class="price">R$ 100,00</p>
                 <button class="add-to-cart">Adicionar ao Carrinho</button>
             </div>
+        </section>
+    </main>
+    <script>
+        let cart = [];
 
-            <div class="product-card" data-id="3">
-                <img src="ass.avif" alt="Tênis Esportivo">
-                <h3>Tênis Nike SB Chron 2</h3>
-                <p class="price">R$ 256,50</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
+        // Atualizar o contador do carrinho
+        function updateCartCount() {
+            const cartCountElement = document.getElementById("cartCount");
+            cartCountElement.textContent = cart.length;
+            cartCountElement.style.display = cart.length > 0 ? "block" : "none";
+        }
 
-            <div class="product-card" data-id="3">
-                <img src="femi.avif" alt="Tênis Esportivo">
-                <h3>Tênis Nike In-Season TR 13 Feminino</h3>
-                <p class="price">R$ 280,00</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
+        // Adicionar produto ao carrinho
+        function addToCart(productId, productName, productPrice) {
+            cart.push({ id: productId, name: productName, price: productPrice });
+            updateCartCount();
+            alert(`${productName} foi adicionado ao carrinho!`);
+        }
 
-            <div class="product-card" data-id="3">
-                <img src="nike.jpg" alt="Tênis Esportivo">
-                <h3>Tênis Nike Giannis Immortality 3</h3>
-                <p class="price">R$ 249,99</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
+        // Redirecionar para a página do carrinho
+        function goToCart() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+            window.location.href = "cart.html";
+        }
 
-            <div class="product-card" data-id="3">
-                <img src="nike.jpg" alt="Tênis Esportivo">
-                <h3>Tênis Nike Giannis Immortality 3</h3>
-                <p class="price">R$ 249,99</p>
-                <button class="add-to-cart">Adicionar ao Carrinho</button>
-            </div>
+        // Inicializar eventos
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll(".add-to-cart");
+            buttons.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    const card = button.closest(".product-card");
+                    const productName = card.querySelector("h3").textContent;
+                    const productPrice = card.querySelector(".price").textContent;
+                    addToCart(index, productName, productPrice);
+                });
+            });
 
-        </div>
-    </section>
-
-    <section class="footer">
-        <p>&copy; 2024 Loja de Tênis - Todos os direitos reservados</p>
-    </section>
-
-    <div id="cartModal" class="cart-modal">
-        <div class="cart-modal-content">
-            <h2>Carrinho de Compras</h2>
-            <div id="cartItems"></div>
-            <button id="closeCartModal" class="btn-close">Fechar</button>
-        </div>
-    </div>
+            document.getElementById("cartButton").addEventListener("click", goToCart);
+            updateCartCount();
+        });
+    </script>
 </body>
-
 </html>
